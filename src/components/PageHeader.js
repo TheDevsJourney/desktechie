@@ -5,7 +5,7 @@ const PageHeader = ({ page, category, subcategory }) => {
   return (
     <div
       style={{
-        height: "300px",
+        height: "340px",
         width: "100%",
         marginBottom: "3.5rem",
         display: "flex",
@@ -18,7 +18,8 @@ const PageHeader = ({ page, category, subcategory }) => {
         style={{
           height: "100%",
           width: "100%",
-          backgroundImage: `linear-gradient(to bottom, rgba(39,146,206, .4), rgba(39,246,156, .52)), url(${sunTornado})`,
+          // backgroundImage: `linear-gradient(to bottom, rgba(39,146,206, .4), rgba(39,246,156, .52)), url(${sunTornado})`,
+          backgroundColor: "rgb(15,200,200)",
           backgroundSize: "cover",
           position: "absolute",
         }}
@@ -28,7 +29,6 @@ const PageHeader = ({ page, category, subcategory }) => {
           fontWeight: "200",
           fontSize: "3.5rem",
           overflow: "hidden",
-          letterSpacing: ".8rem",
           color: "rgba(255,255,255,.7)",
           position: "absolute",
         }}

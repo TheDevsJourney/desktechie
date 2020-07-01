@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import CategoryNav from "../components/CategoryNav"
 
 const Navbar = () => {
   return (
@@ -37,7 +38,8 @@ const Navbar = () => {
           </li>
           <li style={{ marginLeft: "20px" }}>
             <Link to="/categories" style={{ textDecoration: "none" }}>
-              <span>Categories</span>
+              <span className="categoriesNav">Categories</span>
+              <CategoryNav />
             </Link>
           </li>
         </ul>

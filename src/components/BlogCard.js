@@ -14,7 +14,12 @@ const BlogCard = ({
   categories.map(category => (categoryLink = category))
   return (
     <div className="blog-card">
-      <div style={{ height: "250px", position: "relative" }}>
+      <div
+        style={{
+          height: "250px",
+          position: "relative",
+        }}
+      >
         <Link to={`/blog/${slug}`}>
           <Image
             fixed={image}
@@ -25,6 +30,7 @@ const BlogCard = ({
             }}
           />
         </Link>
+        {/* <div className="card-top"></div> */}
         {categories !== "empty" &&
           showCategory !== false &&
           categories.map(category => (
@@ -32,20 +38,7 @@ const BlogCard = ({
               style={{ color: "rgb(240,240,240)", textDecoration: "none" }}
               to={`/categories/${category}/`}
             >
-              <p
-                style={{
-                  position: "relative",
-                  backgroundColor: "rgb(34,178,123)",
-                  padding: "8px 26px",
-                  display: "inline",
-                  top: "30px",
-                  left: "-15px",
-                  boxShadow: "5px 5px 25px rgba(45,45,45,0.1)",
-                  fontSize: ".9rem",
-                }}
-              >
-                {category}
-              </p>
+              <p className={`tag tag-${category}`}>{category}</p>
             </Link>
           ))}
       </div>
@@ -88,6 +81,7 @@ const BlogCard = ({
               <li
                 style={{
                   marginLeft: "8px",
+                  marginTop: "10px",
                   color: "gray",
                   fontSize: "14px",
                   fontStyle: "italic",
